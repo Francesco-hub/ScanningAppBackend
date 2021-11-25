@@ -1,0 +1,3 @@
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Infrastructure.Data\obj\Debug\netcoreapp3.1\ScanningApp.Infrastructure.Data.AssemblyInfoInputs.cache
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Infrastructure.Data\obj\Debug\netcoreapp3.1\ScanningApp.Infrastructure.Data.AssemblyInfo.cs
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Infrastructure.Data\obj\Debug\netcoreapp3.1\ScanningApp.Infrastructure.Data.csproj.CoreCompileInputs.cache

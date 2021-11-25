@@ -1,0 +1,15 @@
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\bin\Debug\netcoreapp5.0\ScanningApp.Core.deps.json
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\bin\Debug\netcoreapp5.0\ScanningApp.Core.dll
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\bin\Debug\netcoreapp5.0\ref\ScanningApp.Core.dll
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\bin\Debug\netcoreapp5.0\ScanningApp.Core.pdb
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\bin\Debug\netcoreapp5.0\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\bin\Debug\netcoreapp5.0\ScanningApp.Core.Entity.pdb
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.csprojAssemblyReference.cache
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.AssemblyInfoInputs.cache
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.AssemblyInfo.cs
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.csproj.CopyComplete
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.dll
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ref\ScanningApp.Core.dll
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core\obj\Debug\netcoreapp5.0\ScanningApp.Core.pdb

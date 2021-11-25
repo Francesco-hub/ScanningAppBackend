@@ -1,0 +1,5 @@
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningAppBackend\obj\Debug\netcoreapp3.1\ScanningAppRestAPI.csprojAssemblyReference.cache
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningAppBackend\obj\Debug\netcoreapp3.1\ScanningAppRestAPI.AssemblyInfoInputs.cache
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningAppBackend\obj\Debug\netcoreapp3.1\ScanningAppRestAPI.AssemblyInfo.cs
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningAppBackend\obj\Debug\netcoreapp3.1\ScanningAppRestAPI.csproj.CoreCompileInputs.cache
+C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningAppBackend\obj\Debug\netcoreapp3.1\ScanningAppRestAPI.MvcApplicationPartsAssemblyInfo.cache
