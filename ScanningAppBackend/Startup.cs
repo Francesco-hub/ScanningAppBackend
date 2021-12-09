@@ -12,6 +12,7 @@ using ScanningApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using ScanningApp.Core.Entity;
 using Newtonsoft.Json;
+using WorkerService;
 
 namespace ScanningAppBackend
 {
@@ -27,10 +28,16 @@ namespace ScanningAppBackend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-        
-        
-        
-        services.AddDbContext<ScanningAppContext>(
+            services.AddCors(o => o.AddPolicy("AllowEverything", builder =>
+            
+                builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                       .AllowAnyHeader()
+            ));
+
+            services.AddHostedService<Worker>();
+            services.AddHttpClient();
+            services.AddDbContext<ScanningAppContext>(
                 opt => opt.UseSqlite("Data Source=sqlite.db"));
             /*services.AddDbContext<ScanningAppContext>(
                 opt => opt.UseInMemoryDatabase("ConDb")
@@ -51,6 +58,7 @@ namespace ScanningAppBackend
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("AllowEverything");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

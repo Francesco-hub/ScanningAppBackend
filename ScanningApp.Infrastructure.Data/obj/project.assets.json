@@ -6152,11 +6152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
       "projectName": "ScanningApp.Infrastructure.Data",
-      "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
+      "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
       "packagesPath": "C:\\Users\\Tesol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\obj\\",
+      "outputPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tesol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6173,11 +6173,11 @@
         "net5.0": {
           "targetAlias": "netcoreapp5.0",
           "projectReferences": {
-            "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
-              "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
+            "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
+              "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
             },
-            "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
-              "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj"
+            "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
+              "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj"
             }
           }
         }

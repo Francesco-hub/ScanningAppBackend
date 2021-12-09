@@ -39,14 +39,14 @@ namespace ScanningAppTest
             /* Mock<IScanRepository> mockRepo = new Mock<IScanRepository>();
              Scan newScan = new Scan
              {
-                 Id = 2,
+                 id = 2,
                  SecurityCode = "gy8H0pBmS",
                  ConcertId = 3
              };
              List<Scan> scanList = new List<Scan>{
                  new Scan
              {
-                 Id = 1,
+                 id = 1,
                  SecurityCode = "q75HB34s",
                  ConcertId = 3
              }

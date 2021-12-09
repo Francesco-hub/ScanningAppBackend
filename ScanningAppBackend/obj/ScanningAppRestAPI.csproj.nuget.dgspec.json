@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj": {}
+    "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
+    "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
         "projectName": "ScanningApp.Core.Entity",
-        "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
+        "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
         "packagesPath": "C:\\Users\\Tesol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\obj\\",
+        "outputPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tesol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
+    "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj",
         "projectName": "ScanningApp.Core",
-        "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj",
+        "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj",
         "packagesPath": "C:\\Users\\Tesol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\obj\\",
+        "outputPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tesol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
-                "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
               }
             }
           }
@@ -116,14 +116,14 @@
         }
       }
     },
-    "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj": {
+    "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
         "projectName": "ScanningApp.Infrastructure.Data",
-        "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
+        "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
         "packagesPath": "C:\\Users\\Tesol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\obj\\",
+        "outputPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tesol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,11 +140,11 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
-                "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
               },
-              "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
-                "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj"
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj"
               }
             }
           }
@@ -193,14 +193,14 @@
         }
       }
     },
-    "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj": {
+    "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj",
         "projectName": "ScanningAppRestAPI",
-        "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj",
+        "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningAppBackend\\ScanningAppRestAPI.csproj",
         "packagesPath": "C:\\Users\\Tesol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningAppBackend\\obj\\",
+        "outputPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningAppBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tesol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -217,14 +217,17 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
-                "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
               },
-              "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
-                "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj"
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj"
               },
-              "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj": {
-                "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj"
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj"
+              },
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\WorkerService\\WorkerService.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\WorkerService\\WorkerService.csproj"
               }
             }
           }
@@ -276,6 +279,82 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\WorkerService\\WorkerService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\WorkerService\\WorkerService.csproj",
+        "projectName": "WorkerService",
+        "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\WorkerService\\WorkerService.csproj",
+        "packagesPath": "C:\\Users\\Tesol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\WorkerService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Tesol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Net.Http.Headers": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

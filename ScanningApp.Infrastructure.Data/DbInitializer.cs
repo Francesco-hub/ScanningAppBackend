@@ -15,9 +15,9 @@ namespace ScanningApp.Infrastructure.Data
             ctx.Database.EnsureCreated();
             var con1 = ctx.Concerts.Add(new Concert()
             {
-                Title = "Concert1",
-                Date = System.DateTime.Now,
-                Time = System.DateTime.Now
+                title = "Concert1",
+                date = System.DateTime.Now.ToString(),
+                start_date = System.DateTime.Now.ToString()
 
             }
                 ).Entity;
@@ -25,7 +25,7 @@ namespace ScanningApp.Infrastructure.Data
             var scn1 = ctx.Scans.Add(new Scan()
             {
                 SecurityCode = "1234",
-                ConcertId = con1.Id
+                ConcertId = con1.id
 
             }).Entity;
             ctx.SaveChanges();

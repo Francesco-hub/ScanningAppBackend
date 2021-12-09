@@ -18,18 +18,18 @@ namespace ScanningAppTest
             Mock<IConcertRepository> mockRepo = new Mock<IConcertRepository>();
             Concert concert1 = new Concert
             {
-                Id = 1,
-                Date = DateTime.Now,
+                id = 1,
+                date = DateTime.Now,
                 Time = DateTime.Now,
-                Title = "TestConcert1",
+                title = "TestConcert1",
                 Scans = new List<Scan>()
             };
             Concert concert2 = new Concert
             {
-                Id = 2,
-                Date = DateTime.Now,
+                id = 2,
+                date = DateTime.Now,
                 Time = DateTime.Now,
-                Title = "TestConcert2",
+                title = "TestConcert2",
                 Scans = new List<Scan>()
             };
 
@@ -47,17 +47,17 @@ namespace ScanningAppTest
             Mock<IConcertRepository> mockRepo = new Mock<IConcertRepository>();
             Concert[] concertList ={ new Concert
             {
-                Id = 1,
-                Date = DateTime.Now,
+                id = 1,
+                date = DateTime.Now,
                 Time = DateTime.Now,
-                Title = "TestConcert1",
+                title = "TestConcert1",
                 Scans = new List<Scan>()
             },
                 new Concert{
-                Id = 2,
-                Date = DateTime.Now,
+                id = 2,
+                date = DateTime.Now,
                 Time = DateTime.Now,
-                Title = "TestConcert2",
+                title = "TestConcert2",
                 Scans = new List<Scan>()
                 }
 

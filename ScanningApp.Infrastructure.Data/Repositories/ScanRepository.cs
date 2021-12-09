@@ -17,7 +17,7 @@ namespace ScanningApp.Infrastructure.Data.Repositories
         }
         public Scan CreateScan(Scan scan)
         {
-            //We have SQL database taking care of Id's
+            //We have SQL database taking care of id's
             var myScan = _ctx.Scans.Add(scan).Entity;
             _ctx.SaveChanges();
             return myScan;

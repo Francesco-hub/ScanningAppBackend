@@ -18,23 +18,26 @@ namespace ScanningApp.Infrastructure.Data.Repositories
         }
         public Concert FindConcertById(int id)
         {
-            return _ctx.Concerts.FirstOrDefault(c => c.Id == id);
+            return _ctx.Concerts.FirstOrDefault(c => c.id == id);
         }
 
         public Concert FindConcertByIdIncludeScans(int id)
         {
-            /* concert.Scans = _scanRepo.GetAllScans()
-                 .Where(scan => scan.ConcertId == concert.Id)
-                 .ToList();*/
-            return _ctx.Concerts
-                 .Include(c => c.Scans)
-                 .FirstOrDefault(c => c.Id == id);
+            /*  concert.Scans = _scanRepo.GetAllScans()
+                   .Where(scan => scan.ConcertId == concert.id)
+                   .ToList();
+              return _ctx.Concerts
+                   .Include(c => c.Scans)
+                   .FirstOrDefault(c => c.id == id);*/
+            return null;
         }
 
         public IEnumerable<Concert> GetAllConcerts()
-        {
+        {/*
             return _ctx.Concerts
                 .Include(c => c.Scans);
+            */
+            return null;
         }
     }
 }

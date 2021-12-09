@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WzYVR0vSYOm9suW23auIVKSQu+zgqMSL+CS91yYoxGwSs2tF02g8cVn5Lon4m9jqa6QwVQm8J3c9BCaNRVXs9g==",
+  "dgSpecHash": "vGA29TpupBl3xoKZFcwkCtpswYiLWba1K7o/DJ35UBEOC7hJQ+2N+LaT36/fO/Q3oivbXFT3n3EHJku/b6x3NQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
+  "projectFilePath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tesol\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Tesol\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
