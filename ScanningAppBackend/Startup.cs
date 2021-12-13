@@ -35,7 +35,6 @@ namespace ScanningAppBackend
                        .AllowAnyHeader()
             ));
 
-            services.AddHostedService<Worker>();
             services.AddHttpClient();
             services.AddDbContext<ScanningAppContext>(
                 opt => opt.UseSqlite("Data Source=sqlite.db"));
@@ -53,6 +52,8 @@ namespace ScanningAppBackend
 
             services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
             services.AddMvc(options => options.EnableEndpointRouting = false);
+
+            services.AddHostedService<Worker>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -313,6 +313,12 @@
             "projectReferences": {
               "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj": {
                 "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj"
+              },
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Core\\ScanningApp.Core.csproj"
+              },
+              "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningApp.Infrastructure.Data\\ScanningApp.Infrastructure.Data.csproj"
               }
             }
           }

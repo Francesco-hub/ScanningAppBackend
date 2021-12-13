@@ -17,7 +17,7 @@ namespace ScanningApp.Infrastructure.Data
             {
                 title = "Concert1",
                 date = System.DateTime.Now.ToString(),
-                start_date = System.DateTime.Now.ToString()
+                start_date = System.DateTime.Now
 
             }
                 ).Entity;

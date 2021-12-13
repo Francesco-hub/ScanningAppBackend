@@ -16,6 +16,13 @@ namespace ScanningApp.Infrastructure.Data.Repositories
         {
             _ctx = ctx;
         }
+
+        public void CreateConcert(Concert concert)
+        {
+            _ctx.Concerts.Add(concert);
+            _ctx.SaveChanges();
+        }
+
         public Concert FindConcertById(int id)
         {
             return _ctx.Concerts.FirstOrDefault(c => c.id == id);
@@ -38,6 +45,11 @@ namespace ScanningApp.Infrastructure.Data.Repositories
                 .Include(c => c.Scans);
             */
             return null;
+        }
+
+        public List<Concert> GetUpcomingConcerts(DateTime date)
+        {
+            return _ctx.Concerts.Where(c => DateTime.Compare(c.start_date, date) >= 0).ToList();
         }
     }
 }

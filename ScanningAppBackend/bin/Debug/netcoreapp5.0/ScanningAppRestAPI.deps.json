@@ -1665,7 +1665,9 @@
           "Microsoft.Extensions.Http": "5.0.0",
           "Microsoft.Net.Http.Headers": "2.2.8",
           "Newtonsoft.Json": "13.0.1",
-          "ScanningApp.Core.Entity": "1.0.0"
+          "ScanningApp.Core": "1.0.0",
+          "ScanningApp.Core.Entity": "1.0.0",
+          "ScanningApp.Infrastructure.Data": "1.0.0"
         },
         "runtime": {
           "WorkerService.dll": {}
