@@ -15,11 +15,9 @@ namespace ScanningApp.Infrastructure.Data
             ctx.Database.EnsureCreated();
             var con1 = ctx.Concerts.Add(new Concert()
             {
-                title = "Concert1",
-                date = System.DateTime.Now.ToString(),
-                start_date = System.DateTime.Now
-
-            }
+                title = "Concert1",               
+                start_date = new DateTime(2022, 05, 09, 09, 15, 00)
+        }
                 ).Entity;
             ctx.SaveChanges();
             var scn1 = ctx.Scans.Add(new Scan()

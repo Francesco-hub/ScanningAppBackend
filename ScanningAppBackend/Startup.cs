@@ -18,29 +18,40 @@ namespace ScanningAppBackend
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
+        {            
             Configuration = configuration;
+            Environment = env;
+            //JwtSecurityKey.SetSecret("nnfal45lngfqLqLLLLL75K");
         }
 
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment Environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            if (Environment.IsDevelopment())
+            {
+                services.AddDbContext<ScanningAppContext>(opt => opt.UseSqlite("Data Source=sqlite.db"));
+            }
+            else
+            {
+                // Azure SQL database:
+                services.AddDbContext<ScanningAppContext>(opt => 
+                            opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+            }
+
             services.AddCors(o => o.AddPolicy("AllowEverything", builder =>
             
-                builder.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                       .AllowAnyHeader()
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader()
             ));
 
             services.AddHttpClient();
-            services.AddDbContext<ScanningAppContext>(
-                opt => opt.UseSqlite("Data Source=sqlite.db"));
-            /*services.AddDbContext<ScanningAppContext>(
-                opt => opt.UseInMemoryDatabase("ConDb")
-                );*/
+            
+
             services.AddScoped<IConcertRepository, ConcertRepository>();
             services.AddScoped<IConcertService, ConcertService>();
 
@@ -67,6 +78,13 @@ namespace ScanningAppBackend
                 {
                     var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
                     DbInitializer.InitData(ctx);
+                }
+            }
+            else if(env.IsProduction())//Production
+            {
+                using(var scope = app.ApplicationServices.CreateScope())
+                {
+                   var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();                    
                 }
             }
             else

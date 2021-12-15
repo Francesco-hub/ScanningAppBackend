@@ -40,11 +40,10 @@ namespace ScanningApp.Infrastructure.Data.Repositories
         }
 
         public IEnumerable<Concert> GetAllConcerts()
-        {/*
-            return _ctx.Concerts
-                .Include(c => c.Scans);
-            */
-            return null;
+        {
+            return _ctx.Concerts;
+            
+            
         }
 
         public List<Concert> GetUpcomingConcerts(DateTime date)

@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -25,6 +26,7 @@ namespace WorkerService
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly JsonSerializerOptions _options;
         private List<Concert> _websiteConcerts;
+        private List<Concert> _databaseConcerts;
 
         public Worker(ILogger<Worker> logger, IHttpClientFactory httpClientFactory, IServiceProvider serviceProvider)
 
@@ -37,7 +39,7 @@ namespace WorkerService
         }
 
 
-        public IEnumerable<String> EEConcerts { get; set; }
+        //public IEnumerable<String> EEConcerts { get; set; }
 
         
 
@@ -47,16 +49,16 @@ namespace WorkerService
             {
                 var httpClient = _httpClientFactory.CreateClient();
                 _websiteConcerts = new List<Concert>();
-                List<Concert> databaseConcerts = new List<Concert>();
+                _databaseConcerts = new List<Concert>();
                 var counter = 1;
                 // string replacement = String.Replace(" &#8211; ", "-");
                 while (true)
                     try
                     {
-                        databaseConcerts = getCurrentConcertList();
+                        _databaseConcerts = getCurrentConcertList();
                         var responseStream = await httpClient.GetStreamAsync("https://esbjergensemble.com/wp-json/tribe/events/v1/events/?page=" + counter);
-                        var concertList = await JsonSerializer.DeserializeAsync<EventDTO>(responseStream, _options);
-                        foreach (var concert in concertList.Events)
+                        var concertList = await JsonSerializer.DeserializeAsync<EventDTO>(responseStream);
+                        foreach (var concert in concertList.events)
                         {
 
                             if (concert.title.Contains(" &#8211; "))
@@ -67,7 +69,13 @@ namespace WorkerService
                             {
                                 concert.title = concert.title.Replace("&#8217;", "'");
                             }
-                            _websiteConcerts.Add(concert);
+
+                            var temp_concert = new Concert();
+                            temp_concert.id = concert.id;
+                            temp_concert.title = concert.title;
+                            temp_concert.start_date = DateTime.Parse(concert.start_date);
+                            
+                            _websiteConcerts.Add(temp_concert);
 
                         }
                         counter++;
@@ -75,36 +83,62 @@ namespace WorkerService
 
                     catch (Exception e)
                     {
-
-                        updateConcertList(databaseConcerts, _websiteConcerts);
-                    }
-
-                await Task.Delay(1000, stoppingToken);
+                        updateConcertList(_websiteConcerts, _databaseConcerts);
+                        await Task.Delay(600000, stoppingToken);
+                    }                
             }
         }
 
         public List<Concert> getCurrentConcertList()
         {
-            return _concertService.Concerts.Where(c => DateTime.Compare(c.start_date, DateTime.Now) >= 0).ToList(); ;
+            return _concertService.Concerts.Where(c => DateTime.Compare(c.start_date, DateTime.Now) >= 0).ToList();
         }
 
 
         public void updateConcertList(List<Concert> websiteConcerts, List<Concert> databaseConcerts)
         {
-            if (websiteConcerts == databaseConcerts)
+            var sameId = false;
+
+            foreach (var webConcert in websiteConcerts)
             {
-                _logger.LogInformation("updateConcertList website = database");
+                foreach (var dbConcert in databaseConcerts)
 
-                foreach (var item in websiteConcerts)
                 {
-                    //Add new concerts
-
+                    if (webConcert.id == dbConcert.id)
+                    {
+                        sameId = true;
+                        break;
+                    }
                 }
-
-
-                return;
+                if(sameId)
+                {
+                    //CASE 1: Concert is in both databaseConcerts and websiteConcerts --> update info inside Concert looking for changes
+                    Concert concertUpdate = _concertService.Concerts.AsNoTracking().FirstOrDefault(c => c.id == webConcert.id);
+                    _concertService.Update(webConcert);
+                    _concertService.SaveChanges();
+                    _logger.LogInformation("Concert with ID: " + webConcert.id + " updated");
+                    sameId = false;
+                }
+                
+                else
+                {
+                    // CASE 2: Concert in websiteConcerts but not in databaseConcerts-- > add Concert to databaseConcerts
+                    _concertService.Add(webConcert);
+                    _concertService.SaveChanges();
+                    _logger.LogInformation("Concert with ID: " + webConcert.id + " added");
+                }
             }
 
+            //CASE 3: Concert in databaseConcerts but not in websiteConcerts --> delete Concert from databaseConcerts
+            List<Concert> except = databaseConcerts.Except(websiteConcerts).ToList();
+            foreach (var item in except)
+            {
+                _logger.LogInformation("item id: " + item.id);
+                _concertService.Attach(item);
+                _concertService.Remove(item);                
+                _concertService.SaveChanges();
+                _logger.LogInformation("Concert with ID: "+ item.id +" removed");
+            }
         }
     }
 }

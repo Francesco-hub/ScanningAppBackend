@@ -10,8 +10,6 @@ namespace ScanningApp.Core.Entity
 
         public string title { get; set; }
 
-        public string date { get; set; }
-
         public DateTime start_date { get; set; }
 
         //public List<Scan> Scans { get; set; }
