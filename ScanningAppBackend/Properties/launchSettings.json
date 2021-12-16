@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "EASV.CustomerRestApi": {
+    "ScanningAppRestAPI": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/concerts",

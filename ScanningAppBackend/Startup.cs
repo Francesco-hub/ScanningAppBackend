@@ -40,6 +40,7 @@ namespace ScanningAppBackend
                 // Azure SQL database:
                 services.AddDbContext<ScanningAppContext>(opt => 
                             opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+
             }
 
             services.AddCors(o => o.AddPolicy("AllowEverything", builder =>
@@ -82,9 +83,11 @@ namespace ScanningAppBackend
             }
             else if(env.IsProduction())//Production
             {
+
                 using(var scope = app.ApplicationServices.CreateScope())
                 {
-                   var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();                    
+                   var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
+                    app.UseExceptionHandler("/Home/Error");
                 }
             }
             else
@@ -93,7 +96,9 @@ namespace ScanningAppBackend
             }
 
             //app.UseHttpsRedirection();
-            app.UseMvc();
+           // app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }
