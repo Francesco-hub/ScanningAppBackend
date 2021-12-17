@@ -31,17 +31,9 @@ namespace ScanningAppBackend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            if (Environment.IsDevelopment())
-            {
-                services.AddDbContext<ScanningAppContext>(opt => opt.UseSqlite("Data Source=sqlite.db"));
-            }
-            else
-            {
-                // Azure SQL database:
-                services.AddDbContext<ScanningAppContext>(opt => 
-                            opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+    
+            services.AddDbContext<ScanningAppContext>(opt => opt.UseSqlite("Data Source=sqlite.db"));
 
-            }
 
             services.AddCors(o => o.AddPolicy("AllowEverything", builder =>
             
@@ -78,22 +70,22 @@ namespace ScanningAppBackend
                 using (var scope = app.ApplicationServices.CreateScope())
                 {
                     var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
-                    DbInitializer.InitData(ctx);
+                    ctx.Database.EnsureDeleted();
+                    ctx.Database.EnsureCreated();
+                    //DbInitializer.InitData(ctx);
                 }
             }
-            else if(env.IsProduction())//Production
+            else //Production
             {
 
                 using(var scope = app.ApplicationServices.CreateScope())
                 {
                    var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
                     app.UseExceptionHandler("/Home/Error");
+                    ctx.Database.EnsureCreated();
                 }
             }
-            else
-            {
-                app.UseHsts();
-            }
+          
 
             //app.UseHttpsRedirection();
            // app.UseMvc();
