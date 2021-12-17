@@ -50,7 +50,7 @@ namespace ScanningAppBackend
 
             services.AddScoped<IScanRepository, ScanRepository>();
             services.AddScoped<IScanService, ScanService>();
-            services.AddMvc(option => option.EnableEndpointRouting = false);
+            //services.AddMvc(option => option.EnableEndpointRouting = false);
 
             services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
