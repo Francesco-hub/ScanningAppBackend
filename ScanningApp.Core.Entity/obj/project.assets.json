@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Tesol\\.nuget\\packages\\": {}
+    "C:\\Users\\rtlop\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
+      "projectUniqueName": "E:\\Github_Repos\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
       "projectName": "ScanningApp.Core.Entity",
-      "projectPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
-      "packagesPath": "C:\\Users\\Tesol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tesol\\Desktop\\Rocio\\ScanningAppBackend\\ScanningApp.Core.Entity\\obj\\",
+      "projectPath": "E:\\Github_Repos\\ScanningAppBackend\\ScanningApp.Core.Entity\\ScanningApp.Core.Entity.csproj",
+      "packagesPath": "C:\\Users\\rtlop\\.nuget\\packages\\",
+      "outputPath": "E:\\Github_Repos\\ScanningAppBackend\\ScanningApp.Core.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tesol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rtlop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
