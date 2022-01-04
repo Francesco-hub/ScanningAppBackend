@@ -77,6 +77,7 @@ namespace ScanningAppBackend
                     ctx.Database.EnsureDeleted();
                     ctx.Database.EnsureCreated();
                     DbInitializer.InitData(ctx);
+                    ctx.InitializeUsers();
                 }
             }
             else //Production
