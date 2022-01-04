@@ -87,6 +87,9 @@ namespace ScanningAppBackend
                    var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
                     app.UseExceptionHandler("/Home/Error");
                     ctx.Database.EnsureCreated();
+
+                    //Users
+                    ctx.InitializeUsers();
                 }
             }
           
