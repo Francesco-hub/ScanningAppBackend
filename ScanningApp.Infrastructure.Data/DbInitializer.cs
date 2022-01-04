@@ -23,7 +23,8 @@ namespace ScanningApp.Infrastructure.Data
             var scn1 = ctx.Scans.Add(new Scan()
             {
                 SecurityCode = "1234",
-                ConcertId = con1.id
+                ConcertId = con1.id,
+                UserId = 111
 
             }).Entity;
             ctx.SaveChanges();

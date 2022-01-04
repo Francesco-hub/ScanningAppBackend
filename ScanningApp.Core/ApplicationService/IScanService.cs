@@ -9,7 +9,7 @@ namespace ScanningApp.Core.ApplicationService
     {
 
         //CreateScan //POST
-        Scan CreateScan(Scan scan);
+        Scan CreateScans(List<Scan> scanList);
 
         //Read //GET
         Scan FindScanByConcertId(int concertId);

@@ -20,5 +20,7 @@ namespace ScanningApp.Infrastructure.Data
         }
         public DbSet<Concert> Concerts { get; set; }
         public DbSet<Scan> Scans { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -7,7 +7,7 @@ namespace ScanningApp.Core.DomainService
     {
         //CreateScan Data
         //No id when enter, but id when exits
-        Scan CreateScan(Scan scan);
+        Scan CreateScans(List<Scan> scanList);
         //Read Data
         Scan FindScanByConcertId(int id);
         IEnumerable<Scan> GetAllScans();

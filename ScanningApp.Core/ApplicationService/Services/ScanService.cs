@@ -17,10 +17,9 @@ namespace ScanningApp.Core.ApplicationService.Services
             _scanRepo = scanRepo;
         }
 
-        public Scan CreateScan(Scan scan)
+        public Scan CreateScans(List<Scan> scanList)
         {
-
-            return _scanRepo.CreateScan(scan);
+            return _scanRepo.CreateScans(scanList);
         }
 
         public Scan FindScanByConcertId(int id)

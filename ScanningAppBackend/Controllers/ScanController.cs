@@ -35,15 +35,16 @@ namespace ScanningAppRestAPI.Controllers
 
         // POST api/scan -- CREATE
         [HttpPost]
-        public ActionResult<Scan> Post([FromBody] Scan scan)
+        public ActionResult<Scan> Post([FromBody] List<Scan> scanList)
         {
             try
             {
-                return Ok(_scanService.CreateScan(scan));
+                return Ok(_scanService.CreateScans(scanList));
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                //return BadRequest(e.Message);
+               return BadRequest(e.InnerException.Message);
             }
 
         }

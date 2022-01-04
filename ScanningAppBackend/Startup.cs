@@ -50,6 +50,10 @@ namespace ScanningAppBackend
 
             services.AddScoped<IScanRepository, ScanRepository>();
             services.AddScoped<IScanService, ScanService>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+
             services.AddMvc(option => option.EnableEndpointRouting = false);
 
             services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
@@ -72,7 +76,7 @@ namespace ScanningAppBackend
                     var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
                     ctx.Database.EnsureDeleted();
                     ctx.Database.EnsureCreated();
-                    //DbInitializer.InitData(ctx);
+                    DbInitializer.InitData(ctx);
                 }
             }
             else //Production
