@@ -1,0 +1,12 @@
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Release\netcoreapp5.0\ScanningApp.Core.Entity.deps.json
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Release\netcoreapp5.0\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Release\netcoreapp5.0\ref\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Release\netcoreapp5.0\ScanningApp.Core.Entity.pdb
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ScanningApp.Core.Entity.csprojAssemblyReference.cache
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ScanningApp.Core.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ScanningApp.Core.Entity.AssemblyInfoInputs.cache
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ScanningApp.Core.Entity.AssemblyInfo.cs
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ScanningApp.Core.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ref\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Release\netcoreapp5.0\ScanningApp.Core.Entity.pdb

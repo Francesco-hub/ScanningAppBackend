@@ -1,0 +1,17 @@
+
+.vs/ScanningAppBackend/v16/.suo
+ScanningAppBackend/bin/Debug/netcoreapp5.0/ScanningAppRestAPI.dll
+ScanningAppBackend/bin/Debug/netcoreapp5.0/ScanningAppRestAPI.pdb
+ScanningAppBackend/bin/Debug/netcoreapp5.0/WorkerService.dll
+ScanningAppBackend/bin/Debug/netcoreapp5.0/WorkerService.pdb
+ScanningAppBackend/obj/Debug/netcoreapp5.0/ScanningAppRestAPI.csprojAssemblyReference.cache
+ScanningAppBackend/obj/Debug/netcoreapp5.0/ScanningAppRestAPI.dll
+ScanningAppBackend/obj/Debug/netcoreapp5.0/ScanningAppRestAPI.pdb
+ScanningAppBackend/sqlite.db
+WorkerService/bin/Debug/net5.0/ref/WorkerService.dll
+WorkerService/bin/Debug/net5.0/WorkerService.dll
+WorkerService/bin/Debug/net5.0/WorkerService.pdb
+WorkerService/obj/Debug/net5.0/ref/WorkerService.dll
+WorkerService/obj/Debug/net5.0/WorkerService.csprojAssemblyReference.cache
+WorkerService/obj/Debug/net5.0/WorkerService.dll
+WorkerService/obj/Debug/net5.0/WorkerService.pdb

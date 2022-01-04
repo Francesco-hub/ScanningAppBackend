@@ -20,6 +20,7 @@
     <ProjectReference Include="..\ScanningApp.Core.Entity\ScanningApp.Core.Entity.csproj" />
     <ProjectReference Include="..\ScanningApp.Core\ScanningApp.Core.csproj" />
     <ProjectReference Include="..\ScanningApp.Infrastructure.Data\ScanningApp.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\WorkerService\WorkerService.csproj" />
   </ItemGroup>
 
 

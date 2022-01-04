@@ -24,26 +24,27 @@ namespace ScanningAppRestAPI.Controllers
             return Ok(_scanService.GetAllScans());
         }
 
-        // GET api/scan/5 -- READ By Id
+        // GET api/scan/5 -- READ By id
         [HttpGet("{id}")]
         public ActionResult<Scan> Get(int id)
         {
-            if (id < 1) return BadRequest("Id must be greater then 0");
+            if (id < 1) return BadRequest("id must be greater then 0");
 
             return Ok();
         }
 
         // POST api/scan -- CREATE
         [HttpPost]
-        public ActionResult<Scan> Post([FromBody] Scan scan)
+        public ActionResult<Scan> Post([FromBody] List<Scan> scanList)
         {
             try
             {
-                return Ok(_scanService.CreateScan(scan));
+                return Ok(_scanService.CreateScans(scanList));
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                //return BadRequest(e.Message);
+               return BadRequest(e.InnerException.Message);
             }
 
         }

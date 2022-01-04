@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ScanningAppRestAPI20211215193507" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Tesol\\Desktop\\ScanningApp\\ScanningAppBackend\\ScanningAppBackend\\obj\\Release\\netcoreapp5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

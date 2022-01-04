@@ -6,15 +6,13 @@ namespace ScanningApp.Core.Entity
 {
     public class Concert
     {
-        public int Id { get; set; }
+        public int id { get; set; }
 
-        public string Title { get; set; }
+        public string title { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime start_date { get; set; }
 
-        public DateTime Time { get; set; }
-
-        public List<Scan> Scans { get; set; }
+        //public List<Scan> Scans { get; set; }
 
         //public int Image { get; set; }
     }

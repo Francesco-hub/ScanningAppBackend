@@ -10,3 +10,15 @@ C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debu
 C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.dll
 C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ref\ScanningApp.Core.Entity.dll
 C:\Users\Tesol\Desktop\Rocio\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.pdb
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Debug\netcoreapp5.0\ScanningApp.Core.Entity.deps.json
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Debug\netcoreapp5.0\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Debug\netcoreapp5.0\ref\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\bin\Debug\netcoreapp5.0\ScanningApp.Core.Entity.pdb
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.csprojAssemblyReference.cache
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.AssemblyInfoInputs.cache
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.AssemblyInfo.cs
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ref\ScanningApp.Core.Entity.dll
+C:\Users\Tesol\Desktop\ScanningApp\ScanningAppBackend\ScanningApp.Core.Entity\obj\Debug\netcoreapp5.0\ScanningApp.Core.Entity.pdb
