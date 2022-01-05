@@ -8,7 +8,7 @@ namespace ScanningApp.Infrastructure.Data
 
         public static void InitMockData(ScanningAppContext ctx)
         {
-            ctx.Database.EnsureDeleted(); //Crucial that it is only in development
+            ctx.Database.EnsureDeleted();  //Crucial that it is only in development
             ctx.Database.EnsureCreated();
 
             //Mock data for testing
@@ -28,6 +28,7 @@ namespace ScanningApp.Infrastructure.Data
             }).Entity;
             ctx.SaveChanges();
         }
+
         public static void InitializeUsers(ScanningAppContext ctx)
         {
             var user1_pia = ctx.Users.Add(new User()
