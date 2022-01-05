@@ -33,6 +33,9 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
+          
+      - name: Test with the dotnet CLI
+        run: dotnet test
 
   deploy:
     runs-on: windows-latest
