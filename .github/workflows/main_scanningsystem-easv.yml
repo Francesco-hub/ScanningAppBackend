@@ -33,7 +33,11 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
-          
+  test:
+    runs-on: windows-latest
+    needs: build
+    steps:
+        
       - name: Test with the dotnet CLI
         run: dotnet test
 
