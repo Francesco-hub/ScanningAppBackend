@@ -29,9 +29,9 @@ namespace ScanningApp.Core.ApplicationService.Services
              return _concertRepo.FindConcertById(id);
          }*/
 
-        public Concert FindConcertByIdIncludeScans(int id)
+        public Concert FindConcertsById(int id)
         {
-            var concert = _concertRepo.FindConcertByIdIncludeScans(id);
+            var concert = _concertRepo.FindConcertById(id);
         
             return concert;
         }
@@ -41,9 +41,9 @@ namespace ScanningApp.Core.ApplicationService.Services
             return _concertRepo.GetAllConcerts().ToList();
         }
 
-        public List<Concert> GetUpcomingConcerts(DateTime date)
+        public List<Concert> GetUpcomingConcerts()
         {
-            return _concertRepo.GetUpcomingConcerts(date);
+            return _concertRepo.GetUpcomingConcerts();
         }
     }
 }

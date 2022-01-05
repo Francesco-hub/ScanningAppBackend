@@ -41,7 +41,11 @@ namespace ScanningAppBackend
                    .AllowAnyMethod()
                    .AllowAnyHeader()
             ));
-
+            services.AddCors(o => o.AddPolicy("AllowOnlyAndroid", builder =>
+            builder.WithOrigins("www.esbjergensemble.com")
+                   .AllowAnyMethod()
+                   .AllowAnyHeader()
+            ));
             services.AddHttpClient();
             
 
@@ -67,7 +71,7 @@ namespace ScanningAppBackend
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors("AllowEverything");
+            app.UseCors("AllowOnlyAndroid");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

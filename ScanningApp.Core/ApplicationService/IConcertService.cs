@@ -12,9 +12,9 @@ namespace ScanningApp.Core.ApplicationService
 
         //Read //GET
         //Concert FindConcertById(int id);
-        Concert FindConcertByIdIncludeScans(int id);
+        Concert FindConcertsById(int id);
         List<Concert> GetAllConcerts();
 
-        List<Concert> GetUpcomingConcerts(DateTime date);
+        List<Concert> GetUpcomingConcerts();
     }
 }

@@ -32,7 +32,7 @@ namespace ScanningAppRestAPI.Controllers
             if (id < 1) return BadRequest("id must be greater then 0");
 
             //return _concertService.FindConcertById(id);
-            return _concertService.FindConcertByIdIncludeScans(id);
+            return _concertService.FindConcertsById(id);
         }
 
     }

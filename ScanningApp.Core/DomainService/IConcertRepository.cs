@@ -12,8 +12,6 @@ namespace ScanningApp.Core.DomainService
         //Read Data
         Concert FindConcertById(int id);
         IEnumerable<Concert> GetAllConcerts();
-        Concert FindConcertByIdIncludeScans(int id);
-
-        List<Concert> GetUpcomingConcerts(DateTime date);
+        List<Concert> GetUpcomingConcerts();
     }
 }

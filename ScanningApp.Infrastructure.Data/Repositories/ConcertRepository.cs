@@ -28,17 +28,6 @@ namespace ScanningApp.Infrastructure.Data.Repositories
             return _ctx.Concerts.FirstOrDefault(c => c.id == id);
         }
 
-        public Concert FindConcertByIdIncludeScans(int id)
-        {
-            /*  concert.Scans = _scanRepo.GetAllScans()
-                   .Where(scan => scan.ConcertId == concert.id)
-                   .ToList();
-              return _ctx.Concerts
-                   .Include(c => c.Scans)
-                   .FirstOrDefault(c => c.id == id);*/
-            return null;
-        }
-
         public IEnumerable<Concert> GetAllConcerts()
         {
             return _ctx.Concerts;
@@ -46,9 +35,10 @@ namespace ScanningApp.Infrastructure.Data.Repositories
             
         }
 
-        public List<Concert> GetUpcomingConcerts(DateTime date)
+        public List<Concert> GetUpcomingConcerts()
         {
-            return _ctx.Concerts.Where(c => DateTime.Compare(c.start_date, date) >= 0).ToList();
+            //return _ctx.Concerts.Where(c => DateTime.Compare(c.start_date, date) >= 0).ToList();
+            return null;
         }
     }
 }

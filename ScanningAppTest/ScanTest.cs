@@ -1,4 +1,5 @@
 ﻿using Moq;
+using ScanningApp.Core.ApplicationService;
 using ScanningApp.Core.ApplicationService.Services;
 using ScanningApp.Core.DomainService;
 using ScanningApp.Core.Entity;
@@ -11,7 +12,7 @@ using Xunit;
 
 namespace ScanningAppTest
 {
-    public class ScanTest
+    public class ScanTest 
     {
         [Fact]
         public void TestGetAllScans()
@@ -21,43 +22,19 @@ namespace ScanningAppTest
             {
                 Id = 1,
                 SecurityCode = "q75HB34s",
-                ConcertId = 3
+                ConcertId = 3,
+                UserId = 1
             },new Scan
             {
                 Id = 2,
                 SecurityCode = "gy8H0pBmS",
-                ConcertId = 2
+                ConcertId = 2,
+                UserId = 1
             }
             };
             mockRepo.Setup(m => m.GetAllScans()).Returns(() => scanList.ToList());
             ScanService scanService = new ScanService(mockRepo.Object);
             Assert.True(scanService.GetAllScans().Count == 2);
-        }
-        [Fact]
-        public void TestCreateScan()
-        {
-            /* Mock<IScanRepository> mockRepo = new Mock<IScanRepository>();
-             Scan newScan = new Scan
-             {
-                 id = 2,
-                 SecurityCode = "gy8H0pBmS",
-                 ConcertId = 3
-             };
-             List<Scan> scanList = new List<Scan>{
-                 new Scan
-             {
-                 id = 1,
-                 SecurityCode = "q75HB34s",
-                 ConcertId = 3
-             }
-             };
-
-             mockRepo.Setup(m => m.GetAllScans()).Returns(() => scanList.ToList());
-             mockRepo.As<List<Scan>>().Setup(m => m.Add(newScan)).Callback<Scan>(newScan => scanList.Add(newScan));
-             ScanService scanService = new ScanService(mockRepo.Object);
-             scanList.Add(newScan);
-            */
-
         }
         [Fact]
         public void TestFindScanByConcertId()
@@ -67,18 +44,45 @@ namespace ScanningAppTest
             {
                 Id = 1,
                 SecurityCode = "q75HB34s",
-                ConcertId = 3
+                ConcertId = 3,
+                UserId = 1
             },new Scan
             {
                 Id = 2,
                 SecurityCode = "gy8H0pBmS",
-                ConcertId = 2
+                ConcertId = 2,
+                UserId = 1
             }
             };
-
             mockRepo.Setup(m => m.FindScanByConcertId(2)).Returns(() => scanList[1]);
             ScanService scanService = new ScanService(mockRepo.Object);
             Assert.True(scanService.FindScanByConcertId(2).SecurityCode == "gy8H0pBmS");
         }
+        [Fact]
+        public void TestCreateScans()
+        {
+            Mock<IScanRepository> mockRepo = new Mock<IScanRepository>();
+            Scan[] scanList ={ new Scan
+            {
+                Id = 1,
+                SecurityCode = "q75HB34s",
+                ConcertId = 3,
+                UserId = 1
+            },new Scan
+            {
+                Id = 2,
+                SecurityCode = "gy8H0pBmS",
+                ConcertId = 2,
+                UserId = 1
+            }
+            };
+            var scanAsList = scanList.ToList();
+            
+            ScanService scanService = new ScanService(mockRepo.Object);
+            scanService.CreateScans(scanAsList);
+            mockRepo.Verify(r => r.CreateScans(scanAsList), Times.Once);
+        }
+
+
     }
 }

@@ -84,7 +84,7 @@ namespace WorkerService
                     catch (Exception e)
                     {
                         updateConcertList(_websiteConcerts, _databaseConcerts);
-                        await Task.Delay(600000, stoppingToken);
+                        await Task.Delay(30000000, stoppingToken);
                     }                
             }
         }

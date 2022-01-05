@@ -1,4 +1,5 @@
 using Moq;
+using ScanningApp.Core.ApplicationService;
 using ScanningApp.Core.ApplicationService.Services;
 using ScanningApp.Core.DomainService;
 using ScanningApp.Core.Entity;
@@ -11,64 +12,86 @@ using Xunit;
 namespace ScanningAppTest
 {
     public class ConcertTest
+
     {
-        [Fact]
-        public void TestFindConcertByIdIncludeScans() 
+       /* public List<Concert> GetUpcomingConcerts()
         {
-            /* Mock<IConcertRepository> mockRepo = new Mock<IConcertRepository>();
-             Concert concert1 = new Concert
-             {
-                 id = 1,
-                 date = DateTime.Now,
-                 Time = DateTime.Now,
-                 title = "TestConcert1",
-                 Scans = new List<Scan>()
-             };
-             Concert concert2 = new Concert
-             {
-                 id = 2,
-                 date = DateTime.Now,
-                 Time = DateTime.Now,
-                 title = "TestConcert2",
-                 Scans = new List<Scan>()
-             };
+            throw new NotImplementedException();
+        }*/
 
-         Concert[] concertList ={concert1,concert2};
+        [Fact]
+        public void TestFindConcertById()
+        {
+            Mock<IConcertRepository> mockRepo = new Mock<IConcertRepository>();
 
-             mockRepo.Setup(m => m.FindConcertByIdIncludeScans(1)).Returns(() => concertList[0]);
+            Concert concert1 = new Concert
+            {
+                id = 1,
+                start_date = DateTime.Now,
+                title = "TestConcert1"
+            };
+            Concert concert2 = new Concert
+            {
+                id = 2,
+                start_date = DateTime.Now,
+                title = "TestConcert2"
+            };
+            Concert[] concertList = { concert1, concert2 };
+
+
+            mockRepo.Setup(m => m.FindConcertById(1)).Returns(() => concertList[0]);
              ConcertService concertService = new ConcertService(mockRepo.Object);
-             Assert.True(concertService.FindConcertByIdIncludeScans(1) == concert1);
-            */
+             Assert.True(concertService.FindConcertsById(1) == concert1);
+            
             Assert.True(true);
         }
 
         [Fact]
         public void TestGetAllConcerts()
         {
-            /* Mock<IConcertRepository> mockRepo = new Mock<IConcertRepository>();
-             Concert[] concertList ={ new Concert
-             {
-                 id = 1,
-                 date = DateTime.Now,
-                 Time = DateTime.Now,
-                 title = "TestConcert1",
-                 Scans = new List<Scan>()
-             },
-                 new Concert{
-                 id = 2,
-                 date = DateTime.Now,
-                 Time = DateTime.Now,
-                 title = "TestConcert2",
-                 Scans = new List<Scan>()
-                 }
-
-             };
-             mockRepo.Setup(m => m.GetAllConcerts()).Returns(() => concertList.ToList());
+            Mock<IConcertRepository> mockRepo = new Mock<IConcertRepository>();
+            Concert concert1 = new Concert
+            {
+                id = 1,
+                start_date = DateTime.Now,
+                title = "TestConcert1"
+            };
+            Concert concert2 = new Concert
+            {
+                id = 2,
+                start_date = DateTime.Now,
+                title = "TestConcert2"
+            };
+            Concert[] concertList = { concert1, concert2 };
+            mockRepo.Setup(m => m.GetAllConcerts()).Returns(() => concertList.ToList());
              ConcertService concertService = new ConcertService(mockRepo.Object);
-             Assert.True(concertService.GetAllConcerts().Count == 2);*/
+             Assert.True(concertService.GetAllConcerts().Count == 2);
             Assert.True(true);
         }
-        
+        [Fact]
+        public void TestCreateConcert()
+        {
+            Mock<IConcertRepository> mockRepo = new Mock<IConcertRepository>();
+            Concert concert1 = new Concert
+            {
+                id = 1,
+                start_date = DateTime.Now,
+                title = "TestConcert1"
+            };
+            Concert concert2 = new Concert
+            {
+                id = 2,
+                start_date = DateTime.Now,
+                title = "TestConcert2"
+            };
+            Concert[] concertList = { concert1, concert2 };
+            ConcertService concertService = new ConcertService(mockRepo.Object);
+            concertService.CreateConcert(concert1);
+            mockRepo.Verify(r => r.CreateConcert(concert1), Times.Once);
 
+        }
+
+        
+        
     }
 }
