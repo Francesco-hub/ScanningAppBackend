@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_and_test:
     runs-on: windows-latest
 
     steps:
@@ -33,10 +33,13 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
+          
+      - name: Test with the dotnet CLI
+        run: dotnet test
 
   deploy:
     runs-on: windows-latest
-    needs: build
+    needs: build_and_test
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
