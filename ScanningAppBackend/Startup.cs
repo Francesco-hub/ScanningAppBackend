@@ -82,7 +82,7 @@ namespace ScanningAppBackend
                 {
                    var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
                    app.UseExceptionHandler("/Home/Error");
-                    ctx.Database.ExecuteSqlRaw("DELETE * FROM USERS");
+                   ctx.Database.ExecuteSqlRaw("DELETE * FROM USERS");
                    ctx.Database.EnsureCreated();
                    //DbInitializer.InitializeUsers(ctx);
                 }
