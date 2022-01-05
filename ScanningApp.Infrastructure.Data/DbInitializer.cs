@@ -5,7 +5,8 @@ namespace ScanningApp.Infrastructure.Data
 {
     public class DbInitializer
     {
-        public static void InitData(ScanningAppContext ctx)
+
+        public static void InitMockData(ScanningAppContext ctx)
         {
             ctx.Database.EnsureDeleted(); //Crucial that it is only in development
             ctx.Database.EnsureCreated();
@@ -25,6 +26,24 @@ namespace ScanningApp.Infrastructure.Data
                 UserId = 111
 
             }).Entity;
+            ctx.SaveChanges();
+        }
+        public static void InitializeUsers(ScanningAppContext ctx)
+        {
+            var user1_pia = ctx.Users.Add(new User()
+            {
+                Code = 1111,
+                FirstName = "Pia",
+                LastName = "Jørs"
+            }).Entity;
+
+            var user2_gabriella = ctx.Users.Add(new User()
+            {
+                Code = 2222,
+                FirstName = "Gabriella",
+                LastName = "Bergman"
+            }).Entity;
+
             ctx.SaveChanges();
         }
     }

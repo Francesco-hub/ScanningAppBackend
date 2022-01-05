@@ -70,8 +70,8 @@ namespace ScanningAppBackend
                     var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
                     ctx.Database.EnsureDeleted();
                     ctx.Database.EnsureCreated();
-                    DbInitializer.InitData(ctx);
-                    ctx.InitializeUsers();
+                    DbInitializer.InitMockData(ctx);
+                    DbInitializer.InitializeUsers(ctx);
                 }
             }
             //Production
@@ -82,9 +82,9 @@ namespace ScanningAppBackend
                 {
                    var ctx = scope.ServiceProvider.GetService<ScanningAppContext>();
                    app.UseExceptionHandler("/Home/Error");
+                    ctx.Database.ExecuteSqlRaw("DELETE * FROM USERS");
                    ctx.Database.EnsureCreated();
-
-                   ctx.InitializeUsers();
+                   //DbInitializer.InitializeUsers(ctx);
                 }
             }
 
