@@ -9,6 +9,5 @@ namespace ScanningApp.Core.Entity
     public class EventDTO
     {
         public List<ConcertDTO> events { get; set; }
-
     }
 }

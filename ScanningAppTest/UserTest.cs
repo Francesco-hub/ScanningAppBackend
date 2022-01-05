@@ -2,11 +2,7 @@
 using ScanningApp.Core.ApplicationService.Services;
 using ScanningApp.Core.DomainService;
 using ScanningApp.Core.Entity;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace ScanningAppTest

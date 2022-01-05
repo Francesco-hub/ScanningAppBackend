@@ -6,6 +6,5 @@
         public int ConcertId { get; set; }
         public int UserId { get; set; }
         public string SecurityCode { get; set; }
-
     }
 }

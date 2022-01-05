@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
 using ScanningApp.Core.ApplicationService;
 using ScanningApp.Core.Entity;
-using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 
 namespace ScanningAppRestAPI.Controllers
 {
@@ -43,10 +43,8 @@ namespace ScanningAppRestAPI.Controllers
             }
             catch (Exception e)
             {
-                //return BadRequest(e.Message);
                return BadRequest(e.InnerException.Message);
             }
-
         }
     }
 }

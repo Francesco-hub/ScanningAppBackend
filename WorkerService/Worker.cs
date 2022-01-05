@@ -36,12 +36,7 @@ namespace WorkerService
             _concertService = serviceProvider.CreateScope().ServiceProvider.GetRequiredService<ScanningAppContext>();
             _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
-        }
-
-
-        //public IEnumerable<String> EEConcerts { get; set; }
-
-        
+        }    
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -51,7 +46,6 @@ namespace WorkerService
                 _websiteConcerts = new List<Concert>();
                 _databaseConcerts = new List<Concert>();
                 var counter = 1;
-                // string replacement = String.Replace(" &#8211; ", "-");
                 while (true)
                     try
                     {
@@ -73,8 +67,7 @@ namespace WorkerService
                             var temp_concert = new Concert();
                             temp_concert.id = concert.id;
                             temp_concert.title = concert.title;
-                            temp_concert.start_date = DateTime.Parse(concert.start_date);
-                            
+                            temp_concert.start_date = DateTime.Parse(concert.start_date);    
                             _websiteConcerts.Add(temp_concert);
 
                         }
@@ -84,7 +77,7 @@ namespace WorkerService
                     catch (Exception e)
                     {
                         updateConcertList(_websiteConcerts, _databaseConcerts);
-                        await Task.Delay(30000000, stoppingToken);
+                        await Task.Delay(600000, stoppingToken);
                     }                
             }
         }
@@ -110,19 +103,19 @@ namespace WorkerService
                         break;
                     }
                 }
-                if(sameId)
-                {
-                    //CASE 1: Concert is in both databaseConcerts and websiteConcerts --> update info inside Concert looking for changes
+                //CASE 1: Concert is in both databaseConcerts and websiteConcerts --> update info inside Concert looking for changes
+                if (sameId)
+                {                    
                     Concert concertUpdate = _concertService.Concerts.AsNoTracking().FirstOrDefault(c => c.id == webConcert.id);
                     _concertService.Update(webConcert);
                     _concertService.SaveChanges();
                     _logger.LogInformation("Concert with ID: " + webConcert.id + " updated");
                     sameId = false;
                 }
-                
+
+                //CASE 2: Concert in websiteConcerts but not in databaseConcerts --> add Concert to databaseConcerts
                 else
-                {
-                    // CASE 2: Concert in websiteConcerts but not in databaseConcerts-- > add Concert to databaseConcerts
+                {                    
                     _concertService.Add(webConcert);
                     _concertService.SaveChanges();
                     _logger.LogInformation("Concert with ID: " + webConcert.id + " added");

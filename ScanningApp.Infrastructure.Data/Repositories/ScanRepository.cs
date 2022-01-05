@@ -1,15 +1,13 @@
 ﻿using ScanningApp.Core.DomainService;
 using ScanningApp.Core.Entity;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ScanningApp.Infrastructure.Data.Repositories
 {
     public class ScanRepository : IScanRepository
     {
-        readonly ScanningAppContext _ctx;
+        private readonly ScanningAppContext _ctx;
 
         public ScanRepository(ScanningAppContext ctx)
         {
@@ -27,14 +25,6 @@ namespace ScanningApp.Infrastructure.Data.Repositories
             
             return myScan;
         }
-
-        /*public Scan CreateScans(Scan scan)
-        {
-            var myScan = new Scan();
-            myScan = _ctx.Scans.Add(scan).Entity;
-            _ctx.SaveChanges();
-            return myScan;
-        }*/
 
         public Scan FindScanByConcertId(int id)
         {

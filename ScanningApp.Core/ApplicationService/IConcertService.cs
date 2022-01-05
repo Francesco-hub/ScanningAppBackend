@@ -1,7 +1,5 @@
 ﻿using ScanningApp.Core.Entity;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ScanningApp.Core.ApplicationService
 {
@@ -10,11 +8,9 @@ namespace ScanningApp.Core.ApplicationService
         //CREATE
         void CreateConcert(Concert concert);
 
-        //Read //GET
-        //Concert FindConcertById(int id);
+        //READ
         Concert FindConcertsById(int id);
         List<Concert> GetAllConcerts();
-
         List<Concert> GetUpcomingConcerts();
     }
 }

@@ -1,5 +1,4 @@
 ﻿using ScanningApp.Core.Entity;
-using System;
 using System.Collections.Generic;
 
 namespace ScanningApp.Core.DomainService
@@ -9,7 +8,7 @@ namespace ScanningApp.Core.DomainService
         //CREATE
         void CreateConcert(Concert concert);
 
-        //Read Data
+        //READ
         Concert FindConcertById(int id);
         IEnumerable<Concert> GetAllConcerts();
         List<Concert> GetUpcomingConcerts();

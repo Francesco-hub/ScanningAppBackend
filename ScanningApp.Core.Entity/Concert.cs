@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ScanningApp.Core.Entity
 {
@@ -11,9 +9,5 @@ namespace ScanningApp.Core.Entity
         public string title { get; set; }
 
         public DateTime start_date { get; set; }
-
-        //public List<Scan> Scans { get; set; }
-
-        //public int Image { get; set; }
     }
 }

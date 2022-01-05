@@ -5,10 +5,10 @@ namespace ScanningApp.Core.DomainService
 {
     public interface IScanRepository
     {
-        //CreateScan Data
-        //No id when enter, but id when exits
+        //CREATE
         Scan CreateScans(List<Scan> scanList);
-        //Read Data
+
+        //READ
         Scan FindScanByConcertId(int id);
         IEnumerable<Scan> GetAllScans();
     }

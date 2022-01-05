@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ScanningApp.Core.ApplicationService;
 using ScanningApp.Core.Entity;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ScanningAppRestAPI.Controllers
 {
@@ -19,7 +16,7 @@ namespace ScanningAppRestAPI.Controllers
             _userService = userService;
         }
 
-
+        // GET api/user -- READ All
         [HttpGet]
         public ActionResult<IEnumerable<User>> Get()
         {

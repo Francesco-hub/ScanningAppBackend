@@ -12,9 +12,7 @@ namespace ScanningApp.Core.Entity
 
         public string title { get; set; }
 
-        public string date { get; set; } /// <summary>
-        /// kitar de aki y de ee
-        /// </summary>
+        public string date { get; set; }
 
         public string start_date { get; set; }
     }

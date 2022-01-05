@@ -1,33 +1,20 @@
 ﻿using ScanningApp.Core.DomainService;
 using ScanningApp.Core.Entity;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ScanningApp.Core.ApplicationService.Services
 {
     public class ConcertService : IConcertService
     {
-        readonly IConcertRepository _concertRepo;
-        readonly IScanRepository _scanRepo;
+        private readonly IConcertRepository _concertRepo;
 
-        public ConcertService(IConcertRepository concertRepository)
-            //, IScanRepository scanRepository)
-        {
-            _concertRepo = concertRepository;
-            //_scanRepo = scanRepository;
-        }
+        public ConcertService(IConcertRepository concertRepository) => _concertRepo = concertRepository;
 
         public void CreateConcert(Concert concert)
         {
             _concertRepo.CreateConcert(concert);
         }
-
-        /* public Concert FindConcertById(int id)
-         {
-             return _concertRepo.FindConcertById(id);
-         }*/
 
         public Concert FindConcertsById(int id)
         {
