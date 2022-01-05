@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_and_test:
+  build:
     runs-on: windows-latest
 
     steps:
@@ -33,13 +33,10 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
-          
-      - name: Test with the dotnet CLI
-        run: dotnet test
 
   deploy:
     runs-on: windows-latest
-    needs: build_and_test
+    needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
@@ -56,5 +53,5 @@ jobs:
         with:
           app-name: 'scanningsystem-easv'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_48CC9DB8120543EFAFADE865C156EA9D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_08224D98CB9549A88034D33A60B22CAB }}
           package: .
